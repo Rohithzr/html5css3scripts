@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5, CSS3 Navigation menu</title>
+		<link rel="stylesheet" href="css/nav.css">
+		
+	</head>
+	<body class="no-js">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+		<nav id="topNav">
+        	<ul>
+            	<li><a href="http://www.technopits.blogspot.com" title="My Blog">My Blog</a></li>
+          	<li><a href="#" title="Social Connect">Socialize</a>
+                	<ul>
+                    	<li><a href="http://www.geekli.st/jarvis143" title="Sub1">Geekli.st</a></li>
+                        <li><a href="http://www.facebook.com/rohithzr" title="Sub2">Facebook</a></li>
+                        <li><a href="http://www.twitter.com/jarvis143" title="Sub3">Twitter</a></li>
+                        </ul>        
+                </li>
+              <li class=last><a href="mailto:rohithzr@india.com?Subject=Git%20hub%20repo" title="Mail Me">Send Mail</a></li>
+              
+          </ul>
+        </nav>
+        <div class="content">
+        HERE COMES THE DATA
+        </div>
+		<script src="js/jquery.js"></script>
+        <script src="js/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
