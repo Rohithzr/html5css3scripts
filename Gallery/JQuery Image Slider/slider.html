@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<title>Slider With JQuery</title>
+
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>    
+
+</head>
+<body>
+   
+<link href="css/my_slideshow_dot.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/my_slideshow_dot.js"></script>
+
+<h2><center>Slider with JQuery</center></h2><br>
+  
+<script language="javascript" type="text/javascript">
+            $(function() {
+                $("#slider").my_slideshow_dot({
+                    slideshow_time_interval: '5000',
+                    slideshow_window_width: '800',
+                    slideshow_window_height: '600',
+                    slideshow_title_color: '#17CCCC',
+                    soldeshow_foreColor: '#000',
+                    directory: 'images/'
+                });
+            });
+        </script>
+    
+<center><div id="slider" class="my_slideshow_dot">
+    <ul>
+        <li><a href=" images/image1.jpg" title="Chrysanthemum"><img src="images/image1.jpg" alt="slideshow_large" width = "800" height "600"/></a></li>
+        <li><a href=" images/image2.jpg" title="Desert"><img src="images/image2.jpg" alt="slideshow_large" width = "800" height "600"/></a></li>
+        <li><a href=" images/image3.jpg" title="Hydrangeas"><img src="images/image3.jpg" alt="slideshow_large" width = "800" height "600"/></a></li>
+        <li><a href=" images/image4.jpg" title="Jellyfish"><img src="images/image4.jpg" alt="slideshow_large" width = "800" height "600"/></a></li>
+    </ul>
+
+<div style="clear: both"></div>
+</div></center>
+
+</body>
+</html>
